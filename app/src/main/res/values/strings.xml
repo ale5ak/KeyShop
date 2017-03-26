@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">KeyShop</string>
+    <string name="description">Buy your new key in our shop and secure your home to never get robbed!</string>
+    <string name="phone">Phone: 123 456 7890</string>
+    <string name="email">Email: keyshop@keyshop.com</string>
+</resources>
