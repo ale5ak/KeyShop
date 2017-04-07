@@ -32,16 +32,16 @@ public class MainActivity extends AppCompatActivity {
                 ImageView imageView = (ImageView) findViewById(R.id.image_view);
 
                 //get screen width
-                float screenWidth = scrollView.getWidth();
+                int screenWidth = scrollView.getWidth();
 
                 //calculate height base on the screen size (screenWidth * 557 / 1486)
                 //and then set 88% of the calculated height to minHeight (88 / 100)
                 int minHeight = Math.round(screenWidth * 557 / 1486 * 88 / 100);
 
                 if (calculatedHeight < minHeight) {
-                    imageView.getLayoutParams().height = minHeight;
+                    imageView.setLayoutParams(new LinearLayout.LayoutParams(screenWidth, minHeight));
                 } else {
-                    imageView.getLayoutParams().height = calculatedHeight;
+                    imageView.setLayoutParams(new LinearLayout.LayoutParams(screenWidth, calculatedHeight));
                 }
             }
         });
